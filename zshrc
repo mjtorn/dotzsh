@@ -23,6 +23,7 @@ source /usr/share/bash-completion/completions/git
 autoload _git
 
 source ~/.zsh/_alias.zsh
+source ~/.zsh/_completion.zsh
 source ~/.zsh/_git_prompt.zsh
 
 HISTSIZE=2048
