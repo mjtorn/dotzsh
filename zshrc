@@ -32,3 +32,6 @@ REPORTTIME=10  # Report anything that lasts over 10 seconds
 #RPROMPT="[zsh]"
 WORDCHARS=$(echo $WORDCHARS| sed -e 's/\///')  # Remove / from C-w wordseps
 
+# More variable configuration
+test -f ~/.zsh/local.zsh && source ~/.zsh/local.zsh
+
