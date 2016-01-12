@@ -10,5 +10,8 @@ setopt EXTENDED_GLOB
 setopt autocd
 setopt allexport
 
+autoload -U compinit
+compinit
+
 WORDCHARS=$(echo $WORDCHARS| sed -e 's/\///')  # Remove / from C-w wordseps
 
