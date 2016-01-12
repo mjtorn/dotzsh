@@ -13,5 +13,9 @@ setopt allexport
 autoload -U compinit
 compinit
 
+HISTSIZE=2048
+LC_COLLATE=C
+REPORTTIME=10  # Report anything that lasts over 10 seconds
+#RPROMPT="[zsh]"
 WORDCHARS=$(echo $WORDCHARS| sed -e 's/\///')  # Remove / from C-w wordseps
 
