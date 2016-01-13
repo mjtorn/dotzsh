@@ -1,5 +1,5 @@
 fpath=(~/.zsh $fpath)
-path=($path /sbin /usr/sbin)
+path=($HOME/.local/bin $path /sbin /usr/sbin)
 
 # Process grep
 fps() {
