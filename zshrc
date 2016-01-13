@@ -9,6 +9,10 @@ fps() {
 # Set the prompt with this, faster than having __git_ps1 in PROMPT
 precmd () {
         __git_ps1 "${debian_chroot:+($debian_chroot)}%n@%m:%~" "%s$ "
+
+        test ! -z $VIRTUAL_ENV && {
+                PS1="($(basename $VIRTUAL_ENV)) $PS1"
+        }
 }
 
 setopt EXTENDED_GLOB
@@ -28,6 +32,7 @@ autoload _git
 source ~/.zsh/_alias.zsh
 source ~/.zsh/_completion.zsh
 source ~/.zsh/_git_prompt.zsh
+source ~/.zsh/_virtualenv.zsh
 
 HISTSIZE=2048
 LC_COLLATE=C
