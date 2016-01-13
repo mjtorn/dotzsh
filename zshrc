@@ -18,6 +18,9 @@ setopt allexport
 autoload -U compinit
 compinit
 
+# Love vim, but not in the shell
+bindkey -e
+
 # XXX: Debian-specific, see also deprecation warning and _git for lulz
 source /usr/share/bash-completion/completions/git
 autoload _git
