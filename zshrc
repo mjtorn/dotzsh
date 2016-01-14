@@ -32,9 +32,9 @@ autoload _git
 source ~/.zsh/_alias.zsh
 source ~/.zsh/_completion.zsh
 source ~/.zsh/_git_prompt.zsh
+source ~/.zsh/_history.zsh
 source ~/.zsh/_virtualenv.zsh
 
-HISTSIZE=2048
 LC_COLLATE=C
 REPORTTIME=10  # Report anything that lasts over 10 seconds
 #RPROMPT="[zsh]"
