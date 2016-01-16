@@ -19,6 +19,8 @@ setopt EXTENDED_GLOB
 setopt autocd
 setopt allexport
 
+unsetopt autoremoveslash
+
 autoload -U compinit
 compinit
 
