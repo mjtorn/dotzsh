@@ -12,4 +12,6 @@ alias -s html=elinks
 alias -s txt="less -MiN"
 alias -s md="less -MiN"
 
+# Search online real quick
+alias ddg='elinks https://duckduckgo.com/'
 
