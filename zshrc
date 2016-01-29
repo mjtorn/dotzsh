@@ -45,3 +45,5 @@ WORDCHARS=$(echo $WORDCHARS| sed -e 's/\///')  # Remove / from C-w wordseps
 # More variable configuration
 test -f ~/.zsh/local.zsh && source ~/.zsh/local.zsh
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
