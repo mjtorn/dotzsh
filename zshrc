@@ -24,6 +24,8 @@ unsetopt autoremoveslash
 autoload -U compinit
 compinit
 
+autoload -U zmv
+
 # Love vim, but not in the shell
 bindkey -e
 
