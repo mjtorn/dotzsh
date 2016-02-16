@@ -29,6 +29,9 @@ autoload -U zmv
 # Love vim, but not in the shell
 bindkey -e
 
+# Sometimes... it's insane... I gotta tell you...
+stty sane
+
 # XXX: Debian-specific, see also deprecation warning and _git for lulz
 source /usr/share/bash-completion/completions/git
 autoload _git
