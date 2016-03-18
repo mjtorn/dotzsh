@@ -1,4 +1,4 @@
-fpath=(~/.zsh $fpath)
+fpath=(~/.zsh ~/.zsh/zsh-completions/src $fpath)
 path=($HOME/.local/bin $path /sbin /usr/sbin)
 
 # Process grep
