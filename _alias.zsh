@@ -15,3 +15,9 @@ alias -s md="less -MiN"
 # Search online real quick
 alias ddg='elinks https://duckduckgo.com/'
 
+# For zshmarks, omit p="showmarks"
+alias g="jump"
+alias s="bookmark"
+alias d="deletemark"
+alias l="showmarks"
+

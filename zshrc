@@ -36,6 +36,8 @@ stty sane
 source /usr/share/bash-completion/completions/git
 autoload _git
 
+source ~/.zsh/zshmarks/init.zsh
+
 source ~/.zsh/_alias.zsh
 source ~/.zsh/_completion.zsh
 source ~/.zsh/_git_prompt.zsh
