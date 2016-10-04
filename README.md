@@ -21,7 +21,11 @@ Save a bookmark for your favorite source trees and activate Python virtualenvs a
     cd src/git_checkouts/foo
     s foo
     echo "workon foo\n" > .env
-    echo "deactivate\n" > .out
+    cat > .out <<EOF
+    if [ -n "\${VIRTUAL_ENV:-}" ]; then
+        deactivate
+    fi
+    EOF
     cd -
 
     # use
