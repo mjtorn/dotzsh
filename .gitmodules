@@ -4,3 +4,6 @@
 [submodule "zshmarks"]
 	path = zshmarks
 	url = https://github.com/jocelynmallon/zshmarks.git
+[submodule "autoenv"]
+	path = autoenv
+	url = https://github.com/horosgrisa/autoenv.git
