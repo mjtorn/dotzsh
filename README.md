@@ -4,7 +4,7 @@ mjt's .zsh/ stuff
 
 ## Installation
 
-    git clone git://github.com/mjtorn/dotzsh.git .zsh
+    git clone git://github.com/mjtorn/dotzsh.git .zsh --recurse-submodules
 
     ln -s .zsh/zshrc .zshrc
 
