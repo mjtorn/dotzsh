@@ -8,6 +8,20 @@ mjt's .zsh/ stuff
 
     ln -s .zsh/zshrc .zshrc
 
+## OSX
+
+Didn't bother too much with keeping track of actual dependencies, but the following should be helpful
+through `brew install`:
+
+  * bash-completion
+  * fzf
+  * git
+  * pyenv
+  * pyenv-virtualenvwrapper
+  * python
+
+Virtualenvwrapper was installed like `/usr/local/Cellar/pyenv-virtualenvwrapper/20140609/bin/pyenv-sh-virtualenvwrapper`.
+
 ## Moar!
 
 Add local configurations to `~/.zsh/local.zsh`, like this:

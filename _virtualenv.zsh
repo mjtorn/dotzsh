@@ -1,8 +1,13 @@
 # precmd would fail this anyway
 export VIRTUAL_ENV_DISABLE_PROMPT=yes
 
-# XXX: Probably Debian-specific, move to local.zsh somehow if ever needed
-VIRTUALENVWRAPPER=/usr/share/virtualenvwrapper/virtualenvwrapper.sh
+# OSX or Debian
+[ -f /usr/local/bin/virtualenvwrapper.sh ] && {
+	VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+        VIRTUALENVWRAPPER=/usr/local/bin/virtualenvwrapper.sh
+} || {
+        VIRTUALENVWRAPPER=/usr/share/virtualenvwrapper/virtualenvwrapper.sh
+}
 
 source $VIRTUALENVWRAPPER
 
