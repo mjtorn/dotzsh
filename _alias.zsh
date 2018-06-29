@@ -1,8 +1,17 @@
 # Usual command aliases
 alias grep='grep --color=auto'
-alias ls='ls -v --color=auto --group-directories-first'
 alias lsd='ls -d'
 alias ll='ls -lh'
+
+# OSX is speshul, its BSD ls doesn't even have --version,
+# maybe no one installs GNU ls on it, so rely on uname -s
+[[ "$(uname -s)" == "Darwin" ]] && {
+        # http://osxdaily.com/2013/02/05/improve-terminal-appearance-mac-os-x/
+        export LSCOLORS=ExFxBxDxCxegedabagacad
+        alias ls='ls -G'
+} || {
+        alias ls='ls -v --color=auto --group-directories-first'
+}
 
 # Global command aliases expand in mid-execution
 alias -g gp='| grep -i'
