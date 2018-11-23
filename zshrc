@@ -11,6 +11,15 @@ fps() {
         ps -Af | grep $1
 }
 
+# Peek into files
+peek() {
+        [ ! -z ${TMUX:-} ] && {
+                tmux split-window -p 33 less $@
+        } || {
+                less $@
+        }
+}
+
 # Set the prompt with this, faster than having __git_ps1 in PROMPT
 precmd () {
         __git_ps1 "${debian_chroot:+($debian_chroot)}%n@%m:%~" "%s$ "
@@ -65,5 +74,5 @@ WORDCHARS=$(echo $WORDCHARS| sed -e 's/[\/-]//')
 # More variable configuration
 test -f ~/.zsh/local.zsh && source ~/.zsh/local.zsh
 
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
