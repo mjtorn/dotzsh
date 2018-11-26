@@ -5,7 +5,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=yes
 # Windows/Cygwin and virtualenvwrapper-win doesn't even work
 
 VENVWRAPBAT="${LOCALAPPDATA}/Programs/Python/Python37/Scripts/virtualenvwrapper.bat"
-[ $OS = "Windows_NT" ] && {
+[ ! -z $OS ] && [ $OS = "Windows_NT" ] && {
 	[ -f $VENVWRAPBAT ] && {
 		echo "Windows with virtualenvwrapper-win, not sourcing anything"
 	}
