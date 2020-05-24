@@ -6,29 +6,6 @@ path=($HOME/.local/bin $path /sbin /usr/sbin)
 	export PATH=$PATH:/cygdrive/c/cygwin64/bin
 }
 
-# Process grep
-fps() {
-        ps -Af | grep $1
-}
-
-# Peek into files
-peek() {
-        [ ! -z ${TMUX:-} ] && {
-                tmux split-window -p 33 less $@
-        } || {
-                less $@
-        }
-}
-
-# Set the prompt with this, faster than having __git_ps1 in PROMPT
-precmd () {
-        __git_ps1 "${debian_chroot:+($debian_chroot)}%n@%m:%~" "%s$ "
-
-        test ! -z $VIRTUAL_ENV && {
-                PS1="($(basename $VIRTUAL_ENV)) $PS1"
-        }
-}
-
 setopt EXTENDED_GLOB
 setopt autocd
 setopt allexport
@@ -59,6 +36,7 @@ source ~/.zsh/zshmarks/init.zsh
 source ~/.zsh/autoenv/autoenv.plugin.zsh
 
 source ~/.zsh/_alias.zsh
+source ~/.zsh/_functions.zsh
 source ~/.zsh/_completion.zsh
 source ~/.zsh/_git_prompt.zsh
 source ~/.zsh/_history.zsh
