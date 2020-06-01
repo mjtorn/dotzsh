@@ -7,6 +7,7 @@ mjt's .zsh/ stuff
     git clone git://github.com/mjtorn/dotzsh.git .zsh --recurse-submodules
 
     ln -s .zsh/zshrc .zshrc
+    ln -s .zsh/zshenv .zshenv
 
 ## OSX
 
