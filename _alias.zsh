@@ -15,6 +15,8 @@ alias ll='ls -lh'
 
 # Global command aliases expand in mid-execution
 alias -g gp='| grep -i'
+alias -g pyrg='rg -g \*py'
+alias -g rsrg='rg -g \*rs'
 
 # Files by suffix can be opened, "executed"
 alias -s html=elinks
