@@ -54,3 +54,7 @@ test -f ~/.zsh/local.zsh && source ~/.zsh/local.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
