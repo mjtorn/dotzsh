@@ -7,3 +7,6 @@
 [submodule "autoenv"]
 	path = autoenv
 	url = https://github.com/horosgrisa/autoenv.git
+[submodule "zsh-fzy"]
+	path = zsh-fzy
+	url = https://github.com/aperezdc/zsh-fzy
