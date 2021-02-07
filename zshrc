@@ -52,8 +52,11 @@ WORDCHARS=$(echo $WORDCHARS| sed -e 's/[\/-]//')
 # More variable configuration
 test -f ~/.zsh/local.zsh && source ~/.zsh/local.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
+which fzy &> /dev/null && {
+        source ~/.zsh/_fzy.zsh
+} || {
+        [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+}
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
