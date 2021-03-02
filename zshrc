@@ -23,15 +23,6 @@ bindkey -e
 # Sometimes... it's insane... I gotta tell you...
 stty sane
 
-# OSX or Debian, see also deprecation warning and _git for lulz
-[ -f /usr/local/share/zsh/site-functions/_git ] && [ -f /usr/local/share/zsh/site-functions/git-completion.bash ] && {
-        source /usr/local/share/zsh/site-functions/git-completion.bash
-        autoload /usr/local/share/zsh/site-functions/_git
-} || {
-        source /usr/share/bash-completion/completions/git
-        autoload _git
-}
-
 source ~/.zsh/zshmarks/init.zsh
 source ~/.zsh/autoenv/autoenv.plugin.zsh
 
