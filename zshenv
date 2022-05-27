@@ -5,3 +5,4 @@ fi
 XDG_RUNTIME_DIR=/run/user/$(id -u)
 
 DOTNET_CLI_TELEMETRY_OPTOUT=1
+test -f "${HOME}/.cargo/env" && . "${HOME}/.cargo/env"
