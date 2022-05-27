@@ -2,7 +2,7 @@ fpath=(~/.zsh ~/.zsh/zsh-completions/src $fpath)
 path=($HOME/.local/bin $path /sbin /usr/sbin)
 
 # Don't want to mess with %PATH% in Windows, except when running zsh
-[ ! -z $OS ] && [ $OS = "Windows_NT" ] && {
+[ ! -z ${OS:-} ] && [ $OS = "Windows_NT" ] && {
 	export PATH=$PATH:/cygdrive/c/cygwin64/bin
 }
 
