@@ -49,6 +49,8 @@ which fzy &> /dev/null && {
         [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 }
 
+fpath+=~/.zfunc
+fpath+=${HOME}/.brew/share/zsh/site-functions
+
 autoload -Uz compinit
 zstyle ':completion:*' menu select
-fpath+=~/.zfunc
