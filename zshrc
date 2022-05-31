@@ -12,9 +12,6 @@ setopt allexport
 
 unsetopt autoremoveslash
 
-autoload -U compinit
-compinit
-
 autoload -U zmv
 
 # Love vim, but not in the shell
@@ -53,4 +50,6 @@ fpath+=~/.zfunc
 fpath+=${HOME}/.brew/share/zsh/site-functions
 
 autoload -Uz compinit
+compinit -i
+
 zstyle ':completion:*' menu select
