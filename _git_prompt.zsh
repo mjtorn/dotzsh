@@ -1,8 +1,10 @@
 # OSX compensation
 [ -f /usr/local/etc/bash_completion.d/git-prompt.sh ] && {
         source /usr/local/etc/bash_completion.d/git-prompt.sh
-} || [ -f ${HOME}/.brew/etc/bash_completion.d/git-prompt.sh ] && {
-        source ${HOME}/.brew/etc/bash_completion.d/git-prompt.sh
+} || {
+        [ -f ${HOME}/.brew/etc/bash_completion.d/git-prompt.sh ] && {
+            source ${HOME}/.brew/etc/bash_completion.d/git-prompt.sh
+        }
 } || {
         source /usr/lib/git-core/git-sh-prompt
 }
