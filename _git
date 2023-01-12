@@ -39,6 +39,7 @@ if [ -z "$script" ]; then
 		"$bash_completion/git"
 		'/etc/bash_completion.d/git' # old debian
 		"${HOME}/.brew/etc/bash_completion.d/git-completion.bash"
+		"/usr/local/etc/bash_completion.d/git-completion.bash"
 		)
 	for e in $locations; do
 		test -f $e && script="$e" && break
