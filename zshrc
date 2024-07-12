@@ -53,3 +53,6 @@ autoload -Uz compinit
 compinit -i
 
 zstyle ':completion:*' menu select
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
