@@ -1,0 +1,21 @@
+#!/usr/bin/env zsh
+
+set -eu
+
+test -z ${1:-} && {
+        echo "Give number of commits"
+        exit 1
+}
+
+which tac 2>&1 > /dev/null || {
+        echo "tac not found, install"
+        exit 1
+}
+
+git log --pretty=oneline | \
+        head -${1} | \
+        tac | \
+        cut -f2- -d' ' | \
+        cut -f1 -d\[ | \
+        cut -f1 -d\( | \
+        sed 's/^/  \* /g'
