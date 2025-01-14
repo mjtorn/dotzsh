@@ -14,9 +14,13 @@ mjt's .zsh/ stuff
 Didn't bother too much with keeping track of actual dependencies, but the following should be helpful
 through `brew install`:
 
+  * git (for the prompt)
+  * virtualenvwrapper (it just is)
+  * fzy (fuzzy searching is tight!)
+
+And these look like legacy to me
+
   * bash-completion
-  * fzf
-  * git
   * pyenv
   * pyenv-virtualenvwrapper
   * python
