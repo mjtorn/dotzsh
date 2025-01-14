@@ -14,6 +14,8 @@ VENVWRAPBAT="${LOCALAPPDATA}/Programs/Python/Python37/Scripts/virtualenvwrapper.
 	[ -f /usr/local/bin/virtualenvwrapper.sh ] && {
 		VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 		VIRTUALENVWRAPPER=/usr/local/bin/virtualenvwrapper.sh
+	} || [ -f ${HOME}/.brew/bin/virtualenvwrapper.sh ] && {
+		VIRTUALENVWRAPPER=${HOME}/.brew/bin/virtualenvwrapper.sh
 	} || {
 		VIRTUALENVWRAPPER=/usr/share/virtualenvwrapper/virtualenvwrapper.sh
 	}
