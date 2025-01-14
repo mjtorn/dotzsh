@@ -39,7 +39,7 @@ Save a bookmark for your favorite source trees and activate Python virtualenvs a
     # setup
     cd src/git_checkouts/foo
     s foo
-    echo "workon foo\n" > .env
+    echo "workon foo\n" > .in
     cat > .out <<EOF
     if [ -n "\${VIRTUAL_ENV:-}" ]; then
         deactivate
