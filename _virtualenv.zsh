@@ -20,6 +20,6 @@ VENVWRAPBAT="${LOCALAPPDATA}/Programs/Python/Python37/Scripts/virtualenvwrapper.
 		VIRTUALENVWRAPPER=/usr/share/virtualenvwrapper/virtualenvwrapper.sh
 	}
 
-	source $VIRTUALENVWRAPPER
+	[ -f $VIRTUALENVWRAPPER ] && source $VIRTUALENVWRAPPER
 }
 
