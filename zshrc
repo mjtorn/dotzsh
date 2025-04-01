@@ -47,7 +47,11 @@ which fzy &> /dev/null && {
 }
 
 fpath+=~/.zfunc
-fpath+=${HOME}/.brew/share/zsh/site-functions
+
+if type brew &> /dev/null; then
+        fpath+=${HOME}/.brew/share/zsh/site-functions
+        fpath+=$(brew --prefix)/share/zsh-completions
+fi
 
 autoload -Uz compinit
 compinit -i
