@@ -13,7 +13,11 @@ setopt interactivecomments
 
 unsetopt autoremoveslash
 
+autoload -Uz compinit
 autoload -U zmv
+
+# Completion stuff
+compinit -i
 
 # Love vim, but not in the shell
 bindkey -e
@@ -38,26 +42,22 @@ REPORTTIME=10  # Report anything that lasts over 10 seconds
 # Remove some chars from C-w wordseps
 WORDCHARS=$(echo $WORDCHARS| sed -e 's/[\/-]//')
 
-# More variable configuration
-test -f ~/.zsh/local.zsh && source ~/.zsh/local.zsh
+fpath+=~/.zfunc  # wat
 
+# Check fzy
 which fzy &> /dev/null && {
         source ~/.zsh/_fzy.zsh
 } || {
         [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 }
 
-fpath+=~/.zfunc
-
+# Check brew
 if type brew &> /dev/null; then
         fpath+=${HOME}/.brew/share/zsh/site-functions
         fpath+=$(brew --prefix)/share/zsh-completions
 fi
 
-autoload -Uz compinit
-compinit -i
-
-zstyle ':completion:*' menu select
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# More variable configuration
+test -f ~/.zsh/local.zsh && source ~/.zsh/local.zsh
