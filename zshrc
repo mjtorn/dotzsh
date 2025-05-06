@@ -9,6 +9,7 @@ path=($HOME/.local/bin $HOME/.zsh/bin $path /sbin /usr/sbin)
 setopt EXTENDED_GLOB
 setopt autocd
 setopt allexport
+setopt interactivecomments
 
 unsetopt autoremoveslash
 
