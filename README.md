@@ -34,6 +34,13 @@ Add local configurations to `~/.zsh/local.zsh`, like this:
     EDITOR='/home/mjt/.local/bin/nvim'
     zstyle '*' hosts $(grep -v -e \^\# -e \^\  /etc/hosts) example.com example.org
 
+Mad Max^Hn pager:
+
+    export MANPAGER='nvim --appimage-extract-and-run +Man!'
+
+Do note that this will mess up if NeoVim is set to look for sessions and finds one
+in the path where you want to call `man`! Maybe that should be looked into.
+
 Save a bookmark for your favorite source trees and activate Python virtualenvs automatically:
 
     # setup
