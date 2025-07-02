@@ -6,6 +6,8 @@ path=($HOME/.local/bin $HOME/.zsh/bin $path /sbin /usr/sbin)
 	export PATH=$PATH:/cygdrive/c/cygwin64/bin
 }
 
+test -f ${HOME}/.dotnet/dotnet && export PATH=${HOME}/.dotnet/:${PATH}
+
 setopt EXTENDED_GLOB
 setopt autocd
 setopt allexport
