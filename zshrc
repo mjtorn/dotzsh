@@ -15,6 +15,9 @@ setopt interactivecomments
 
 unsetopt autoremoveslash
 
+fpath+=~/.zsh/.zfunc  # wat
+fpath+=/usr/share/zsh/site-functions  # y no default?
+
 autoload -Uz compinit
 autoload -U zmv
 
@@ -43,8 +46,6 @@ REPORTTIME=10  # Report anything that lasts over 10 seconds
 
 # Remove some chars from C-w wordseps
 WORDCHARS=$(echo $WORDCHARS| sed -e 's/[\/-]//')
-
-fpath+=~/.zfunc  # wat
 
 # Check fzy
 which fzy &> /dev/null && {
