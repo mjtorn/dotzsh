@@ -36,7 +36,14 @@ Add local configurations to `~/.zsh/local.zsh`, like this:
 
 Mad Max^Hn pager:
 
-    export MANPAGER='nvim --appimage-extract-and-run +Man!'
+    ## This fails with Obsession loading Session.vim
+    # export MANPAGER='nvim --appimage-extract-and-run +Man!'
+
+    ## This is probably the most pure, but I would like a minimal conf at least
+    # MANPAGER='nvim --appimage-extract-and-run --clean +Man!'
+
+    ## This seems to work, though unsure if the path trickery is gonna be an issue
+    export MANPAGER='nvim --appimage-extract-and-run --cmd "lcd /tmp/" +Man!'
 
 Do note that this will mess up if NeoVim is set to look for sessions and finds one
 in the path where you want to call `man`! Maybe that should be looked into.
