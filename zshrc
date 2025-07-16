@@ -67,3 +67,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # More variable configuration
 test -f ~/.zsh/local.zsh && source ~/.zsh/local.zsh
+
+# ssh agent
+~/.zsh/bin/ssh-agent-env.zsh
