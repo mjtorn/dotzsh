@@ -47,6 +47,9 @@ REPORTTIME=10  # Report anything that lasts over 10 seconds
 # Remove some chars from C-w wordseps
 WORDCHARS=$(echo $WORDCHARS| sed -e 's/[\/-]//')
 
+
+BOOKMARKS_FILE=${HOME}/.config/zshmarks/bookmarks
+
 # Check fzy
 which fzy &> /dev/null && {
         source ~/.zsh/_fzy.zsh
