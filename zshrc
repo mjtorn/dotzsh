@@ -70,3 +70,5 @@ test -f ~/.zsh/local.zsh && source ~/.zsh/local.zsh
 
 # ssh agent
 ~/.zsh/bin/ssh-agent-env.zsh
+# tty login is somehow different
+test -z $SSH_AGENT_PID && test -f ${HOME}/.cache/ssh-agent.env && source ${HOME}/.cache/ssh-agent.env

@@ -3,6 +3,15 @@
 LOCKFILE=${HOME}/.cache/ssh-agent-env.lock
 SSH_ENV=${HOME}/.cache/ssh-agent.env
 
+test ! -z $SSH_AGENT_PID && test ! -z $SSH_AUTH_SOCK && {
+    # echo -n "Found agent ${SSH_AGENT_PID} at ${SSH_AUTH_SOCK} "
+    if kill -0 ${SSH_AGENT_PID} 2>/dev/null; then
+        # echo "... alive"
+
+        exit 0
+    fi
+}
+
 test -f $LOCKFILE && {
     echo -n "Agent lock active "
     cat $SSH_ENV
@@ -33,3 +42,4 @@ test ! -f ${SSH_ENV} && {
 
     source "$SSH_ENV"
 }
+
