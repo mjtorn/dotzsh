@@ -1,6 +1,14 @@
 #!/usr/bin/env zsh
 
-SSH_ENV="$HOME/.cache/ssh-agent.env"
+LOCKFILE=${HOME}/.cache/ssh-agent-env.lock
+SSH_ENV=${HOME}/.cache/ssh-agent.env
+
+test -f $LOCKFILE && {
+    echo -n "Agent lock active "
+    cat $SSH_ENV
+
+    exit 1
+}
 
 # Start ssh-agent if not already running
 test -f ${SSH_ENV} && {
@@ -20,6 +28,8 @@ test ! -f ${SSH_ENV} && {
 
     ssh-agent > ${SSH_ENV}
     chmod 600 "$SSH_ENV"
+
+    rm -f $LOCKFILE
 
     source "$SSH_ENV"
 }
