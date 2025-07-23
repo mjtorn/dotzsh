@@ -30,6 +30,8 @@ bindkey -e
 # Sometimes... it's insane... I gotta tell you...
 stty sane
 
+BOOKMARKS_FILE=${HOME}/.config/zshmarks/bookmarks
+
 source ~/.zsh/zshmarks/init.zsh
 source ~/.zsh/autoenv/autoenv.plugin.zsh
 
@@ -40,15 +42,14 @@ source ~/.zsh/_git_prompt.zsh
 source ~/.zsh/_history.zsh
 source ~/.zsh/_virtualenv.zsh
 
+for f in ${HOME}/.zsh/autocomplete/*; do source $f; done
+
 LC_COLLATE=C
 REPORTTIME=10  # Report anything that lasts over 10 seconds
 #RPROMPT="[zsh]"
 
 # Remove some chars from C-w wordseps
 WORDCHARS=$(echo $WORDCHARS| sed -e 's/[\/-]//')
-
-
-BOOKMARKS_FILE=${HOME}/.config/zshmarks/bookmarks
 
 # Check fzy
 which fzy &> /dev/null && {
