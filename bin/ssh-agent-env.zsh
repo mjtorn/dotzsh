@@ -40,6 +40,6 @@ test ! -f ${SSH_ENV} && {
 
     rm -f $LOCKFILE
 
-    source "$SSH_ENV"
+    echo source "$SSH_ENV"
 }
 

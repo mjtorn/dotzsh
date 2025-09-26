@@ -69,7 +69,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # More variable configuration
 test -f ~/.zsh/local.zsh && source ~/.zsh/local.zsh
 
-# ssh agent
-~/.zsh/bin/ssh-agent-env.zsh
+# ssh agent disabled
 # tty login is somehow different
-test -z $SSH_AGENT_PID && test -f ${HOME}/.cache/ssh-agent.env && source ${HOME}/.cache/ssh-agent.env
+false && test -z $SSH_AUTH_SOCK && {
+        ~/.zsh/bin/ssh-agent-env.zsh
+        test -f ${HOME}/.cache/ssh-agent.env && source ${HOME}/.cache/ssh-agent.env || echo "ssh-agent fail"
+}
