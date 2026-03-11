@@ -31,7 +31,3 @@ alias g="jump"
 alias s="bookmark"
 alias d="deletemark"
 alias l="showmarks"
-
-# Enforcing ripgrep-to-less could be done in config,
-# but I don't track that stuff in Git. Not at the moment at least.
-alias rg="rg -p"

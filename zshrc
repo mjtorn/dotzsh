@@ -60,6 +60,9 @@ which fzy &> /dev/null && {
         [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 }
 
+# Check rg
+which rg &> /dev/null && source ~/.zsh/_rg.zsh
+
 # Check brew
 if type brew &> /dev/null; then
         fpath+=${HOME}/.brew/share/zsh/site-functions
