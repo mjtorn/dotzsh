@@ -51,6 +51,8 @@ REPORTTIME=10  # Report anything that lasts over 10 seconds
 # Remove some chars from C-w wordseps
 WORDCHARS=$(echo $WORDCHARS| sed -e 's/[\/-]//')
 
+GREP_COLORS='fn=01;33'  # Bright yellow
+
 # Check fzy
 which fzy &> /dev/null && {
         source ~/.zsh/_fzy.zsh
