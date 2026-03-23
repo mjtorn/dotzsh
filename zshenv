@@ -3,6 +3,7 @@ if [[ -n $VIRTUAL_ENV && -e "${VIRTUAL_ENV}/bin/activate" ]]; then
 fi
 
 XDG_RUNTIME_DIR=/run/user/$(id -u)
+XDG_DATA_DIRS=${HOME}/.local/share/flatpak/exports/share:$XDG_DATA_DIRS
 
 DOTNET_CLI_TELEMETRY_OPTOUT=1
 test -f "${HOME}/.cargo/env" && . "${HOME}/.cargo/env"
