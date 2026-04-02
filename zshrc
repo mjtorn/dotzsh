@@ -27,6 +27,11 @@ compinit -i
 # Love vim, but not in the shell
 bindkey -e
 
+# Editing the command line when oneliners get out of hand is dope
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
+
 # Sometimes... it's insane... I gotta tell you...
 stty sane
 
