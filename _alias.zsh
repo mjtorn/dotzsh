@@ -26,6 +26,10 @@ alias -s md="less -MiN"
 # Search online real quick
 alias ddg='elinks https://duckduckgo.com/'
 
+# Searching history is not always fun because of matching,
+# (ab)use fzy as a selection widget
+alias hatf="history 0 | awk '{ \$1=\"\"; sub(/^ +/,\"\"); print }' | tac | fzy"
+
 # For zshmarks, omit p="showmarks"
 alias g="jump"
 alias s="bookmark"
