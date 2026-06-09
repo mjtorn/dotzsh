@@ -76,6 +76,9 @@ fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# Python virtual environments should be convenient to be auto-activated when tmux enters the directories
+test -f .venv/bin/activate && source .venv/bin/activate
+
 # More variable configuration
 test -f ~/.zsh/local.zsh && source ~/.zsh/local.zsh
 
